@@ -1,0 +1,9 @@
+{
+    "priceSlippage": {
+    "ratio": 0,
+    "calculationError": "Error fetching token prices: Error: No coingecko price for destinationToken",
+    "bucket": "low",
+    "sourceAmountInETH": 0,
+    "destinationAmountInEth": 0
+}
+}

@@ -1,0 +1,20 @@
+ui/app/ducks/gas/gas.duck.js
+101:  const url = `https://api.metaswap.codefi.network/gasPrices`;
+104:    referrer: 'https://api.metaswap.codefi.network/gasPrices',
+
+ui/app/ducks/gas/gas-duck.test.js
+162:      nock('https://api.metaswap.codefi.network')
+175:          .args[0].startsWith('https://api.metaswap.codefi.network/gasPrices'),
+237:      nock('https://api.metaswap.codefi.network')
+254:          .args[0].startsWith('https://api.metaswap.codefi.network/gasPrices'),
+
+ui/app/ducks/metamask/metamask.js
+10:    rpcUrl: 'https://rawtestrpc.metamask.io/',
+
+app/scripts/platforms/extension.js
+228:    if (txId.startsWith('https://'))
+
+
+ui/app/pages/swaps/swaps.util.js
+30:const METASWAP_API_HOST = 'https://api.metaswap.codefi.network';
+359:    `https://api.coingecko.com/api/v3/simple/token_price/ethereum?${query}`,

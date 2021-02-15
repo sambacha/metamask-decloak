@@ -1,0 +1,12 @@
+{
+  "name": "metamask_decloak",
+  "version": "1.0.0",
+  "description": "Step 1: Create a file environments.plist inside the folder  ```bash ~/Library/LaunchAgents  ``` with the following content:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

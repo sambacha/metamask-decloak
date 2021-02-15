@@ -1,0 +1,1 @@
+curl -h https://api.metaswap.codefi.network/trades?destinationToken=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&sourceToken=0x0000000000000000000000000000000000000000&sourceAmount=1100000000000000000&slippage=2&timeout=10000&walletAddress=0xc409821f6c72563590e4cd7f76a820e37a03b836

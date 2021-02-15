@@ -1,0 +1,25 @@
+{
+	"trade": null,
+	"sourceToken": "0x0000000000000000000000000000000000000000",
+	"destinationToken": "0xf013406a0b1d544238083df0b93ad0d2cbe0f65f",
+	"sourceAmount": "300000000000000000",
+	"destinationAmount": null,
+	"error": "Request failed with status code 400",
+	"approvalNeeded": null,
+	"maxGas": 770000,
+	"averageGas": 210545,
+	"estimatedRefund": 80001,
+	"fetchTime": 329,
+	"aggregator": "zeroExUniswap",
+	"aggType": "DEX",
+	"fee": 0.875,
+	"gasMultiplier": 1.5,
+	"priceSlippage": {
+		"ratio": 0,
+		"calculationError": "Error fetching token prices: Error: No coingecko price for destinationToken",
+		"bucket": "low",
+		"sourceAmountInETH": 0,
+		"destinationAmountInEth": 0
+	}
+}], "cachedTime": 1610367993823
+}

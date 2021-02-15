@@ -1,0 +1,17 @@
+	
+"{"https://api.metaswap.codefi.network/featureFlag""
+5	"cachedFetch:https://api.metaswap.codefi.network/aggregatorMetadata"	
+"{"cachedResponse":{"totle":{"color":"#283B4C","tit"
+6	"cachedFetch:https://api.metaswap.codefi.network/featureFlag"	
+"{"cachedResponse":{"active":true},"cachedTime":1613299006721}"
+7	"cachedFetch:https://api.metaswap.codefi.network/gasPrices"	
+"{"cachedResponse":{"SafeGasPrice":"282","ProposeGasPrice":"408","FastGasPrice":"450"},"cachedTime":1610375687794}"
+8	"cachedFetch:https://api.metaswap.codefi.network/quoteRefreshRate"	
+"{"cachedResponse":{"seconds":45},"cachedTime":1610374788534}"
+9	"cachedFetch:https://api.metaswap.codefi.network/tokens"	
+"{"cachedResponse":[{"address":"0x6b175474e89094c44"
+10	"cachedFetch:https://api.metaswap.codefi.network/topAssets"
+
+
+
+"cachedFetch:https://www.4byte.directory/api/v1/signatures/?hex_signature=0x60806040"	
