@@ -1,3 +1,14 @@
+## metamask decloak'd
+
+> assorted values / definitions 
+
+```js
+// Represents the interval time for which we check for swaps feature liveliness
+export const SWAPS_LIVENESS_CHECK_INTERVAL = 6 * 60 * 60 * 1000 // 6 hours
+```
+
+
+### unlocking `
 Step 1: Create a file environments.plist inside the folder 
 ```bash
 ~/Library/LaunchAgents 
