@@ -7,6 +7,16 @@
 export const SWAPS_LIVENESS_CHECK_INTERVAL = 6 * 60 * 60 * 1000 // 6 hours
 ```
 
+### specific http headers
+
+MetaMask adds additional fields in HTTP Header requests identifying it as a client for Infura specific connectivity and general RPC providers/Applications. 
+An RPC provider *could* block any request coming from *non metamask applications* by enforcing the `Origin: chrome-extenstion` part of the HTTP header. This can be spoofed obviously.
+
+```
+Infura-Source: metamask/internal
+Origin: chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn
+```
+
 
 ### unlocking `
 Step 1: Create a file environments.plist inside the folder 
