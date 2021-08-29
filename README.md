@@ -1,6 +1,12 @@
-## metamask decloak'd
+# Decloaking Metamask
 
-> assorted values / definitions 
+### Abstract
+
+Uncovering the application specific / design choices / practices of the Metamask client and its MetaSwap application/plugins
+
+
+
+### assorted values / definitions 
 
 ```js
 // Represents the interval time for which we check for swaps feature liveliness
