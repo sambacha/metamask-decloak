@@ -5,6 +5,14 @@
 Uncovering the application specific / design choices / practices of the Metamask client and its MetaSwap application/plugins
 
 
+#### resource links for chrome extenstions 
+
+- [crx-excvator](https://crxcavator.io/)
+
+- [tarnish](https://thehackerblog.com/tarnish/)
+
+- [exthouse](https://github.com/treosh/exthouse)
+
 
 ### assorted values / definitions 
 
