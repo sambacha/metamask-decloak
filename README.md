@@ -21,6 +21,50 @@ Uncovering the application specific / design choices / practices of the Metamask
 export const SWAPS_LIVENESS_CHECK_INTERVAL = 6 * 60 * 60 * 1000 // 6 hours
 ```
 
+### nonce
+
+> from state logs
+
+```json
+[
+  {
+    "note": "transactions#approveTransaction",
+    "op": "add",
+    "path": "/txParams/nonce",
+    "timestamp": 1629953664600,
+    "value": "0x6d"
+  },
+  {
+    "op": "add",
+    "path": "/nonceDetails",
+    "value": {
+      "local": {
+        "details": {
+          "highest": 109,
+          "startPoint": 109
+        },
+        "name": "local",
+        "nonce": 109
+      },
+      "network": {
+        "details": {
+          "baseCount": 109,
+          "blockNumber": "0xc7dfb2"
+        },
+        "name": "network",
+        "nonce": 109
+      },
+      "params": {
+        "highestLocallyConfirmed": 109,
+        "highestSuggested": 109,
+        "nextNetworkNonce": 109
+      }
+    }
+  }
+]
+```
+
+
 ### specific http headers
 
 MetaMask adds additional fields in HTTP Header requests identifying it as a client for Infura specific connectivity and general RPC providers/Applications. 
