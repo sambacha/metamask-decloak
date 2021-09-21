@@ -4,6 +4,23 @@
 
 Uncovering the application specific / design choices / practices of the Metamask client and its MetaSwap application/plugins
 
+### V2
+
+```js
+const METASWAP_ETH_API_HOST = 'https://api.metaswap.codefi.network';
+
+const METASWAP_BSC_API_HOST = 'https://bsc-api.metaswap.codefi.network';
+
+const SWAPS_TESTNET_CHAIN_ID = '0x539';
+const SWAPS_TESTNET_HOST = 'https://metaswap-api.airswap-dev.codefi.network';
+
+export const SWAPS_API_V2_BASE_URL = 'https://api2.metaswap.codefi.network';
+export const SWAPS_DEV_API_V2_BASE_URL =
+  'https://api2.metaswap-dev.codefi.network';
+export const GAS_API_BASE_URL = 'https://gas-api.metaswap.codefi.network';
+export const GAS_DEV_API_BASE_URL =
+  'https://gas-api.metaswap-dev.codefi.network';
+```
 
 #### resource links for chrome extenstions 
 
