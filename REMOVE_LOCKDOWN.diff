@@ -1,0 +1,53 @@
+diff --git a/app/scripts/disable-console.js b/app/scripts/disable-console.js
+index d1ba36d574..cf0289f5bc 100644
+--- a/app/scripts/disable-console.js
++++ b/app/scripts/disable-console.js
+@@ -1,13 +1,13 @@
+ // Disable console.log in contentscript to prevent SES/lockdown logging to external page
+ // eslint-disable-next-line import/unambiguous
+-if (
+-  !(typeof process !== 'undefined' && process.env.METAMASK_DEBUG) &&
+-  typeof console !== undefined
+-) {
+-  console.log = noop;
+-  console.info = noop;
+-}
++// if (
++//   !(typeof process !== 'undefined' && process.env.METAMASK_DEBUG) &&
++//   typeof console !== undefined
++// ) {
++//   console.log = noop;
++//   console.info = noop;
++// }
+ 
+-function noop() {
+-  return undefined;
+-}
++// function noop() {
++//   return undefined;
++// }
+diff --git a/app/scripts/runLockdown.js b/app/scripts/runLockdown.js
+index 2918368e7e..b653759348 100644
+--- a/app/scripts/runLockdown.js
++++ b/app/scripts/runLockdown.js
+@@ -1,13 +1,13 @@
+ // Freezes all intrinsics
+ try {
+   // eslint-disable-next-line no-undef,import/unambiguous
+-  lockdown({
+-    consoleTaming: 'unsafe',
+-    errorTaming: 'unsafe',
+-    mathTaming: 'unsafe',
+-    dateTaming: 'unsafe',
+-    overrideTaming: 'severe',
+-  });
++  // lockdown({
++  //   consoleTaming: 'unsafe',
++  //   errorTaming: 'unsafe',
++  //   mathTaming: 'unsafe',
++  //   dateTaming: 'unsafe',
++  //   overrideTaming: 'severe',
++  // });
+ } catch (error) {
+   // If the `lockdown` call throws an exception, it interferes with the
+   // contentscript injection on some versions of Firefox. The error is
