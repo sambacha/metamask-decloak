@@ -132,3 +132,31 @@ Regex:
 app/scripts/controllers/plugins.js
 26:const isTest = process.env.IN_TEST === 'true' || process.env.METAMASK_ENV === 'test'
 fuzzylist
+
+## MetaMask Metrics - Collecting data point examples
+
+### Custom Network Added
+
+```js
+// source: app/scripts/lib/rpc-method-middleware/handlers/add-ethereum-chain.js
+    sendMetrics({
+      event: 'Custom Network Added',
+      category: 'Network',
+      referrer: {
+        url: origin,
+      },
+      sensitiveProperties: {
+        chain_id: _chainId,
+        rpc_url: firstValidRPCUrl,
+        network_name: _chainName,
+        // Including network to override the default network
+        // property included in all events. For RPC type networks
+        // the MetaMetrics controller uses the rpcUrl for the network
+        // property.
+        network: firstValidRPCUrl,
+        symbol: ticker,
+        block_explorer_url: firstValidBlockExplorerUrl,
+        source: 'dapp',
+      },
+    });
+ ```
