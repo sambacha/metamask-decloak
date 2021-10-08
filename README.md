@@ -1,5 +1,14 @@
 # Decloaking Metamask
 
+
+## Development Builds
+
+[see safari-metamask](https://github.com/sambacha/safari-metamask)
+
+Check the wiki in here as well
+
+
+
 ### Abstract
 
 Uncovering the application specific / design choices / practices of the Metamask client and its MetaSwap application/plugins
