@@ -97,6 +97,12 @@ export const GAS_DEV_API_BASE_URL =
   'https://gas-api.metaswap-dev.codefi.network';
 ```
 
+### Metaswap ABI
+
+you can find it here: 
+
+`src/Metamsk_Swap_ABI.json`
+
 #### resource links for chrome extenstions 
 
 - [crx-excvator](https://crxcavator.io/)
