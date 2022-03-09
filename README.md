@@ -1,5 +1,9 @@
 # Decloaking Metamask
 
+## Notice
+
+**Use [the new controllers repo to see the real development now via github.com/MetaMask/controllers](https://github.com/MetaMask/controllers)
+
 
 ## Development Builds
 
@@ -391,3 +395,52 @@ export const METAMETRICS_BACKGROUND_PAGE_OBJECT = {
  */
 
 ```
+
+### Advanced Gas Controls 
+
+```sh
+MAX_GAS_LIMIT_DEC
+```
+
+```js
+        'Gas limit must be greater than 20999 and less than 7920027',
+        `Gas limit must be greater than 20999 and less than ${MAX_GAS_LIMIT_DEC}`,
+```
+
+
+## Handling Block Reorgs
+
+> 12 to 1500 blocks
+
+> [source commit https://github.com/MetaMask/metamask-extension/commit/ebfd21d20a8c8bc13276de051a77c97c1ebf1c89]
+
+```typescript 
+  pollLatestBlocks(txId, txMeta) {
+    const { confirmTransaction, query, resetTransactionToSubmitted } = this;
+    const cnfTransaction = confirmTransaction.bind(this);
+    const resetTransaction = resetTransactionToSubmitted.bind(this);
+    const intervalId = setInterval(async function () {
+      const block = await query.getBlockByNumber('latest', false);
+      const blockNumber = new BigNumber(block.number).toNumber();
+      const txBlockNumber = new BigNumber(
+        txMeta?.txReceipt?.blockNumber,
+      ).toNumber();
+      const blockDepth = blockNumber - txBlockNumber;
+      if (blockDepth >= 12) {
+        cnfTransaction(txId);
+        clearInterval(intervalId);
+      } else {
+        let currentBlock = block;
+        for (let i = 0; i <= blockDepth; i++) {
+          if (currentBlock.uncles?.includes(txMeta?.txReceipt?.blockHash)) {
+            resetTransaction(txId);
+            clearInterval(intervalId);
+            break;
+          }
+          currentBlock = await query.getBlockByHash(block.parentHash, false);
+        }
+      }
+    }, 1500);
+  }
+  // values 12 and 1500 used above are best guess, they may need to be calibrated to different networks.
+  ```
