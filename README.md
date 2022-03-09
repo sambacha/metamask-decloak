@@ -2,7 +2,7 @@
 
 ## Notice
 
-**Use [the new controllers repo to see the real development now via github.com/MetaMask/controllers](https://github.com/MetaMask/controllers)
+**Use [the new controllers repo to see the real development now via github.com/MetaMask/controllers](https://github.com/MetaMask/controllers)**
 
 
 ## Development Builds
