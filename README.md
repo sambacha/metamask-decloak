@@ -4,6 +4,33 @@
 
 **Use [the new controllers repo to see the real development now via github.com/MetaMask/controllers](https://github.com/MetaMask/controllers)**
 
+## MetaMask encrypted vault paths
+
+> src: https://gist.githubusercontent.com/miguelmota/331edaf9ebb68159e574a5c8391dd019/raw/2e1031aaeb3602fc023f6b3a3a7acf325f1e7095/README.md
+
+> Examples of how to read encrypted vault keystore paths from Google Chrome extension directory on Windows, macOS, and Linux
+
+## Windows (PowerShell)
+
+```bash
+Get-ChildItem -Recurse "$HOME\AppData\Local\Google\Chrome\User Data\Default\Local Extension Settings\*" | Select-String -Pattern 'vault":"(.*?}.*?)"}' | Select-Object -First 1 | ForEach {$_.Matches.groups[1].Value} 
+```
+
+## Mac (Bash)
+
+```bash
+LC_ALL="C" egrep -roa 'vault":"(.*?"})' ~/Library/Application\ Support/Google/Chrome/Default/Local\ Extension\ Settings/ | sed -E 's/.*({.*}).*/\1/g' | head -1
+```
+
+## Linux
+
+Interestingly, I wasn't able to find encrypted vault under these paths:
+
+```bash
+~/.config/google-chrome/Default/Extensions/
+~/.config/google-chrome/Default/Local\ Extension\ Settings/
+ ```
+ 
 
 ## Development Builds
 
